@@ -26,21 +26,19 @@ end
 
 
 
-def long_planeteer_calls(calls_long)
+def long_planeteer_calls(calls_long, calls_short)
   i = 0
   if i < calls_long.length
-    calls_long.all? do |call|
-      #{call.length} <= 4
-    i = i + 1
-    end
-    
-  else 
     calls_long.any? do |call|
       #{call.length} > 4
     i = i + 1
-    end
   end
-  
+  else 
+    calls_short.all? do |call|
+      #{call.length} >= 4
+    i = i + 1
+  end
+end
 end
 
 
