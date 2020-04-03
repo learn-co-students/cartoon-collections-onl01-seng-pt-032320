@@ -22,27 +22,25 @@ def summon_captain_planet(veggies)
   planeteer_calls 
 end
  
-
-
-
-
-def long_planeteer_calls(calls_long, calls_short)
-  i = 0
-  if i < calls_long.length
-    calls_long.any? do |call|
-      #{call.length} > 4
-    i = i + 1
+def long_planeteer_calls(array)
+  
+  less_than = array.all? do |call|
+    call.length <= 4
   end
-  else 
-    calls_short.all? do |call|
-      #{call.length} >= 4
-    i = i + 1
+
+  more_than = array.any? do |call|
+    call.length > 4
   end
-end
+  less_than
+  more_than
 end
 
-
-
-#def find_the_cheese(array_of_strings)
- # cheese_types = ["cheddar", "gouda", "camembert"]
-#end
+def find_the_cheese(array)
+ cheese_types = ["cheddar", "gouda", "camembert"]
+  
+  if array.include?("cheddar") do |type|
+    end
+    #{type}
+  end
+ 
+end
